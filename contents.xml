@@ -1,9 +1,9 @@
 <?xml version='1.0'?>
 <table-of-contents>
-  <index>
+  <brock>
     <name>Table of Contents</name>
     <path>index.html</path>
-  </index>
+  </brock>
   <chapters>
     <chapter>
       <name>The Science of Computing</name>

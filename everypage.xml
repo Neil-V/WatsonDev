@@ -1,0 +1,203 @@
+<?xml version='1.0'?>
+<!--This is the opening tag for the Table of Contents-->
+<table-of-contents>
+<!--This is the opening tag for the Chapters-->
+	<chapters>
+	<!--This is the opening tag for Chapter One-->
+		 <chapter>
+		 	<cname>The Science of Computing</cname>
+		 	<cpath>ch01.html</cpath>
+				<!--This is the opening tag for the sections in Chapter One -->
+				<sections>
+					<!--Individual Sections for Chapter One-->
+							<!--Start of Chapter 1 subsections-->
+							<section>
+								<sname>Introduction</sname>
+								<spath>ch01s1.html</spath>
+							</section>
+							<section>
+								<sname>What is Computer Science?</sname>
+								<spath>ch01s2.html</spath>
+							</section>
+							<section>
+								<sname>Four Important Questions</sname>
+								<spath>ch01s3.html</spath>
+									<!--This is where the sub-sub-sections of Chapter 1 Section 3-->
+									<sub-section>
+										<sbname>How are computers used?</sbname>
+										<sbpath>ch01s3p1.html</sbpath>
+									</sub-section>
+									<sub-section>
+										<sbname>How does computer software work?</sbname>
+										<sbpath>ch01s3p2.html</sbpath>
+									</sub-section>
+									<sub-section>
+										<sbname>How does computer hardware work?</sbname>
+										<sbpath>ch01s3p3.html</sbpath>
+									</sub-section>
+									<sub-section>
+										<sbname>What are the limitations and potential</sbname>
+										<sbpath>ch01s3p4.html</sbpath>
+									</sub-section>
+				    </section>
+				</sections>
+		</chapter> <!-- End of First Chapter -->
+	      
+	    <!--This is the opening tag for Chapter Two-->
+	 <chapter>
+	  <cname>Computers as Communication and Problem Solving Tools</cname>
+	  <cpath>ch02.html</cpath>
+			<!--This is the opening tag for the sections in Chapter Two-->
+			<sections>
+				<!--Individual Sections for Chapter Two-->
+				<section>
+							<sname>Introduction</sname>
+							<spath>ch02s1.html</spath>
+						</section>
+						<section>
+							<sname>The changing role of computers?</sname>
+							<spath>ch02s2.html</spath>
+						</section>
+						<section>
+							<sname>Communication-Oriented Applications</sname>
+							<spath>ch02s3.html</spath>
+								<!--This is where the sub-sub-sections of Chapter 2 Section 3-->
+								<sub-section>
+									<sbname>Email</sbname>
+									<sbpath>ch02s3p1.html</sbpath>
+								</sub-section>
+								<sub-section>
+									<sbname>Instant Messaging Applications</sbname>
+									<sbpath>ch02s3p2.html</sbpath>
+								</sub-section>
+								<sub-section>
+									<sbname>Web Browsers</sbname>
+									<sbpath>ch02s3p3.html</sbpath>
+								</sub-section>
+								<sub-section>
+									<sbname>Word Processors</sbname>
+									<sbpath>ch02s3p4.html</sbpath>
+								</sub-section>
+								<sub-section>
+									<sbname>Presentation Software</sbname>
+									<sbpath>ch02s3p5.html</sbpath>
+								</sub-section>
+						</section>
+						<section>
+							<sname>Spreadsheets</sname>
+							<spath>ch02s4.html</spath>
+								<!--This is where the sub-sub-sections of Chapter 2 Section 4-->
+								<sub-section>
+									<sbname>Basic Features of a Spreadsheets</sbname>
+									<sbpath>ch02s4p1.html</sbpath>
+								</sub-section>
+								<sub-section>
+									<sbname>Formula Evaluation: A Closer Look</sbname>
+									<sbpath>ch02s4p2.html</sbpath>
+								</sub-section>
+								<sub-section>
+									<sbname>Relative and Absolute All References</sbname>
+									<sbpath>ch02s4p3.html</sbpath>
+								</sub-section>
+								<sub-section>
+									<sbname>Miscellaneous Features: "Replicate" and Built-In Functions</sbname>
+									<sbpath>ch02s4p4.html</sbpath>
+								</sub-section>
+								<sub-section>
+									<sbname>Solving Problems with Spreadsheets</sbname>
+									<sbpath>ch02s4p5.html</sbpath>
+								</sub-section>
+						</section>
+			</sections>
+	</chapter> <!-- End of 2nd Chapter -->
+	      
+	<!--This is the opening tag for Chapter Three-->
+	<chapter>
+	 <cname>Information Storage and Retrieval</cname>
+	 <cpath>ch03.html</cpath>
+	 <!--This is the opening tag for the sections in Chapter Three -->
+			<sections>
+				<!--Individual Sections for Chapter Three-->
+				<section>
+						<!--Start of Chapter Two subsections-->
+						<sname>Introduction</sname>
+						<spath>ch03s1.html</spath>
+					</section>
+					<section>
+						<sname>The Hardware Level</sname>
+						<spath>ch03s2.html</spath>
+					</section>
+					<section>
+						<sname>The File Organization Level</sname>
+						<spath>ch03s3.html</spath>
+							<!--This is where the sub-sub-sections of Chapter 3 Section 3-->
+							<sub-section>
+								<sbsname>Contiguous Storage</sbsname>
+								<sbpath>ch03s3p1.html</sbpath>
+							</sub-section>
+							<sub-section>
+								<sbname>Linked Storage</sbname>
+								<sbpath>ch01s3p2.html</sbpath>
+							</sub-section>
+							<sub-section>
+								<sbname>Indexed Storage</sbname>
+								<sbpath>ch01s3p3.html</sbpath>
+							</sub-section>
+							<sub-section>
+								<sbname>What are the limitations and potential</sbname>
+								<sbpath>ch01s3p4.html</sbpath>
+							</sub-section>
+						</section>
+			</sections>
+	 </chapter>
+	 <chapter>
+      <cname>The Social, Legal, and Ethical Aspects of Computing </cname>
+      <cpath>ch04.html</cpath>
+    </chapter>
+    <chapter>
+      <cname>Algorithms -- The Key to Understanding Software</cname>
+      <cpath>ch05.html</cpath>
+    </chapter>
+    <chapter>
+      <cname>Developing Graphical Algorithms</cname>
+      <cpath>ch06.html</cpath>
+    </chapter>
+    <chapter>
+    	<cname> Data Structures -- The Organization of Data at the Program Level </cname>
+    	<cpath> ch07.html </cpath>
+    </chapter>
+    <chapter>
+      <cname>JavaScript Programming</cname>
+      <cpath>ch08.html</cpath>
+    </chapter>
+    <chapter>
+      <cname>Functional, Logical, and Object-Oriented Programming</cname>
+      <cpath>ch09.html</cpath>
+    </chapter>
+    <chapter>
+      <cname>Software Engineering</cname>
+      <cpath>ch10.html</cpath>
+    </chapter>
+    <chapter>
+      <cname>Assembly Language and Computer Architecture</cname>
+      <cpath>ch11.html</cpath>
+    </chapter>
+    <chapter>
+      <cname>Digital Circuit Design</cname>
+      <cpath>ch12.html</cpath>
+    </chapter>
+    <chapter>
+      <cname>Theoretical and Practical Limits of Computing</cname>
+      <cpath>ch13.html</cpath>
+    </chapter>
+    <chapter>
+      <cname>Computing and Intelligence</cname>
+      <cpath>ch14.html</cpath>
+    </chapter>
+    <chapter>
+      <cname>The Past, Present, and Future of Computing</cname>
+      <cpath>ch15.html</cpath>
+    </chapter>
+ </chapters>
+</table-of-contents>
+<!-- vim: set sts=2 sw=2 : -->

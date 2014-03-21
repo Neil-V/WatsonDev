@@ -79,11 +79,11 @@ var navbar_content ='<link href = "css/font-awesome.min.css" rel = "stylesheet">
 			});
 
 			// font size increse/decrese using slider
-			$('#fontSlider').slider(); 
+			/*$('#fontSlider').slider(); 
 			var fontChange = function() { $('.page-wrapper').css('font-size', r.getValue()) };
-			var r = $('#fontSlider').slider().on('slide', fontChange).data('slider');
+			var r = $('#fontSlider').slider().on('slide', fontChange).data('slider');*/
 
-			/*//font sizing
+					//font sizing
 			  $('.increaseFont').click(
 			  function() {
 				var curFontSize = $('.wrapper').css('font-size');
@@ -95,7 +95,7 @@ var navbar_content ='<link href = "css/font-awesome.min.css" rel = "stylesheet">
 				var curFontSize = $('.wrapper').css('font-size');
 				$('.wrapper').css('font-size', parseInt(curFontSize)-1);
 				}
-			  );*/
+			  );
 
 
 
