@@ -14,51 +14,47 @@
 		<!-- Google fonts -->
 	    <link href='http://fonts.googleapis.com/css?family=Exo+2' rel='stylesheet' type='text/css'>
 	    <!-- CSS files -->
-	    <link href = "css/font-awesome.min.css" rel = "stylesheet">
+	    <link href = "css/font-awesome.min.css" rel = "stylesheet"><!-- font-awesome glyphicons -->
 	    <link href = "css/bootstrap.css" rel = "stylesheet">
 	    <link href = "css/styles.css" rel = "stylesheet">
 	    <link href = "css/generalmedia.css" rel = "stylesheet">
-	    <link href = "css/slider.css" rel = "stylesheet"> <!-- Font size slider css -->
-
-	   
+	    <!--<link href = "css/slider.css" rel = "stylesheet"> Font size slider css -->
 
 	    <!-- Java Script files -->
 	    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
 	    <script type="text/javascript" src="js/bootstrap.min.js"></script>
 
-	
+
 	</head>
 
 	<body>
 		<!--------------------------------- NAVIGATION SECTION -------------------------------->
-		<img class="navbar-fixed-top" id="clickme" src="Images/down-arrow.png" > <!-- down arrow img -->
+		
+			<img class="navbar-fixed-top" id="clickme" src="Images/down-arrow.png" > <!-- down arrow img -->
 		<div class="navbar navbar-default navbar-fixed-top" id="navbar"> <!--navbar-static-top-->
+			<div class="container"> <!-- navbar container -->
 					<button class = "navbar-toggle" data-toggle = "collapse" data-target = ".navHeaderCollapse"> <!--Header button-->
 						<span class = "icon-bar"></span>
 						<span class = "icon-bar"></span>
 						<span class = "icon-bar"></span>
 					</button>
-					<div class="collapse navbar-collapse navHeaderCollapse">
-						<div class="navbar-brand pull-left">
+					<div class="navbar-brand pull-left">
 						<a class="brand" href = "index.html"> <img id="logo" src="Images/logo3.png"></a> <!--Logo in navbar -->
-						</div>
-						<!-- <div class = "collapse navbar-collapse navHeaderCollapse">  <!--collapse navbar -->
-							<ul class = "nav navbar-nav navbar-right">
-								<li class="dropdown">
-								<a data-toggle="dropdown" class="dropdown-toggle"><img src="Images/font-size.png"></a>
-								<ul class="dropdown-menu">
-								<li>
-									<slider type="text" class="span2 filter_slider" value="" data-slider-min="8" data-slider-max="30" data-slider-step="1"data-slider-value="12" id="fontSlider"  style="">
-									</li>
-								</ul>
-							</li>
-								<li> <a href="ch_toc2.html"><i class="fa fa-book"></i>Chapters</a></li>
-								<li> <a href="section_toc2.html"><i class="fa fa-list-ul"></i>Sections</a></li>
-								<li> <a id="min"><i class="fa fa-arrow-up"></i></a> <!-- Up arrow image -->
-							</ul>
-					</div> <!-- END colla[pse navbar-collapse navHeaderCollapse -->
-				</div><!-- END navbar navbar-defualt navbar-fixed-top -->
-			  <!--<script>
+					</div>
+					<div class = "collapse navbar-collapse navHeaderCollapse"> <!-- collapse navbar -->
+						<ul class = "nav navbar-nav navbar-right">
+							<li> <a class="increaseFont"><i class="fa fa-plus"></i></a> <!-- Up arrow image --></li>
+							<li> <a><img id="fontAs" src="Images/fontAs.png" ></a> </li>
+							<li> <a class="decreaseFont"><i class="fa fa-minus"></i></a> <!-- Up arrow image --></li>
+							<li> <a href="ch_toc2.html"><i class="fa fa-book"></i>Chapters</a></li>
+							<li> <a href="section_toc2.html"><i class="fa fa-list-ul"></i>Sections</a></li>
+							<li> <a id="min"><i class="fa fa-arrow-up"></i></a> <!-- Up arrow image -->
+						</ul>
+					</div> <!-- END collapse navbar -->
+				</div>  <!-- END navbar container -->
+			</div> <!-- END navbar-static-top -->
+
+			  <script>
 			  var toggle = 0;
 			  $('#min').click(
 			  function() {
@@ -87,39 +83,50 @@
 				});
 				
 				
-			/*	//font sizing
+				//font sizing
 			  $('.increaseFont').click(
-			  function() {
-			  	var curFontSize = $('.page-wrapper').css('font-size');
-				$('.page-wrapper').css('font-size', parseInt(curFontSize)+1);
-				}
+			  	function() {
+				  	var curFontSize = $('.page-wrapper').css('font-size');
+				  	var newFontSize; // holds the new font size
+						$('.page-wrapper').css('font-size', newFontSize = (parseInt(curFontSize)+1));
+					}
 			  );
+
 			  $('.decreaseFont').click(
-			  function() {
-			  	var curFontSize = $('.page-wrapper').css('font-size');
-				$('.page-wrapper').css('font-size', parseInt(curFontSize)-1);
-				}
-			  );*/
+			  	function() {
+			  		var curFontSize = $('.page-wrapper').css('font-size');
+						$('.page-wrapper').css('font-size', newFontSize = (parseInt(curFontSize)-1));
+					}
+			  );
+
+			  document.cookie="cookieFontSize=newFontSize";
+			  document.write(newFontSize + "<br>");
 
 			  // font size increse/decrese using slider
-			$('#fontSlider').slider(); 
+			/*$('#fontSlider').slider(); 
 			var fontChange = function() { $('.page-wrapper').css('font-size', r.getValue()) };
-			var r = $('#fontSlider').slider().on('slide', fontChange).data('slider');
+			var r = $('#fontSlider').slider().on('slide', fontChange).data('slider');*/
 
-			  </script>-->
+			  </script>
 		<!--------------------------------- END NAVIGATION SECTION -------------------------------->
-		
-	    <div class="container-fluid">
-			<div class="row-fluid">
-				<div class="span1 offset11">
-						<!--Sidebar content-->
-				</div>
-				<div class="span11">
-					<!--Body content-->
-				</div>
-			</div>
+
+	    <div class="page-wrapper">
+
+			<p class="Section">
+				1.2 What is computer science?
+			</p>
+	
+			<p>
+				If you stopped someone on the street and asked him “What do computer scientists do?” you would probably get a response along the lines of “They work with computers” – that is, of course, assuming they didn’t tell you to “get lost”<span class="Footnote_20_Symbol"><span class="Footnote" title="Footnote: Or something even less polite."><a href="#ftn1" id="body_ftn1">[1]</a></span></span>.  
+			</p>
+	
+			<p>
+				Most people know that computer scientists work with computers.  Many are less clear when it comes to knowing exactly what computer scientists do with those computers.  Some people believe that computing involves learning to use spreadsheets, word processors, and databases.  The truth is that computer scientists are really no more likely to be proficient with word processors or spreadsheets than any other professionals.  Some people think computer scientists build or repair computers.  While computer scientists do study the physical organization of computers and do help to design them, they are not the people to call when your disk drive won’t work.
+			</p>
+
 		</div>
 			
 
 	</body>
 </html>
+

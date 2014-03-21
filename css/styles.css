@@ -55,6 +55,10 @@ body { padding-top: 7%; }
   padding-left: 10%;
 }
 
+.navbar-right{
+  padding-right: 3%;
+} 
+@media screen and (max-width: 640px) { .navbar-right { padding-right: 0%;}}
 
 .small-img{ width: 10%; }
 .medium-img{ width: 50%; }
@@ -89,10 +93,24 @@ body { padding-top: 7%; }
 }
 
 /* Font awesome icons */ 
-.fa {  
+.fa-book, .fa-list-ul {  
   padding-right: 5px; 
   position: relative; 
 }
+
+.fa-plus{
+  margin-right: -300%;
+}
+
+.fa-minus{
+  margin-left: -300%;
+}
+
+#fontAs{
+  max-width: 50%; 
+  padding: 0;
+}
+@media screen and (max-width: 800px) { .fa-plus, .fa-minus { margin: 0;} .#fontAs{ max-width: 25%;}}
 
 /* Plus sign, placement */
 #clickme{ 
@@ -122,8 +140,8 @@ body { padding-top: 7%; }
 #years, #months, #posts{ cursor:pointer;}
 #years, .bold-me {font-weight: bold;} #months {font-weight: medium;}
 .archive_year { cursor: pointer; list-style: none; }
-.archive_month { list-style-type: circle; cursor: pointer; }
-.archive_posts { list-style: square url('http://www.webbossuk.com/admin/images/reply-arrow.png'); cursor: pointer; }
+.archive_month { list-style-type: disc; cursor: pointer; }
+.archive_posts { list-style-type: circle;}/*square url('http://www.webbossuk.com/admin/images/reply-arrow.png'); cursor: pointer; }*/
 
 
 
