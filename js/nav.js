@@ -14,14 +14,9 @@ var navbar_content ='<link href = "css/font-awesome.min.css" rel = "stylesheet">
 					</div>\
 					<div class = "collapse navbar-collapse navHeaderCollapse"> <!-- collapse navbar -->\
 						<ul class = "nav navbar-nav navbar-right">\
-							<li class="dropdown">\
-							<a data-toggle="dropdown" class="dropdown-toggle"><img src="Images/font-size.png"></a>\
-							<ul class="dropdown-menu">\
-							<li>\
-								<slider type="text" class="span2 filter_slider" value="" data-slider-min="8" data-slider-max="30" data-slider-step="1"data-slider-value="12" id="fontSlider"  style="">\
-								</li>\
-							</ul>\
-						</li>\
+							<li> <a class="increaseFont"><i class="fa fa-plus"></i></a> <!-- Up arrow image --></li>\
+							<li> <a><img id="fontAs" src="Images/fontAs.png" ></a> </li>\
+							<li> <a class="decreaseFont"><i class="fa fa-minus"></i></a> <!-- Up arrow image --></li>\
 							<li> <a href="ch_toc2.html"><i class="fa fa-book"></i>Chapters</a></li>\
 							<li> <a href="section_toc2.html"><i class="fa fa-list-ul"></i>Sections</a></li>\
 							<li> <a id="min"><i class="fa fa-arrow-up"></i></a> <!-- Up arrow image -->\
@@ -85,16 +80,18 @@ var navbar_content ='<link href = "css/font-awesome.min.css" rel = "stylesheet">
 
 					//font sizing
 			  $('.increaseFont').click(
-			  function() {
-				var curFontSize = $('.wrapper').css('font-size');
-				$('.wrapper').css('font-size', parseInt(curFontSize)+1);
-				}
+			  	function() {
+				  	var curFontSize = $('.page-wrapper').css('font-size');
+				  	var newFontSize; // holds the new font size
+						$('.page-wrapper').css('font-size', newFontSize = (parseInt(curFontSize)+1));
+					}
 			  );
+
 			  $('.decreaseFont').click(
-			  function() {
-				var curFontSize = $('.wrapper').css('font-size');
-				$('.wrapper').css('font-size', parseInt(curFontSize)-1);
-				}
+			  	function() {
+			  		var curFontSize = $('.page-wrapper').css('font-size');
+						$('.page-wrapper').css('font-size', newFontSize = (parseInt(curFontSize)-1));
+					}
 			  );
 
 

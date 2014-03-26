@@ -14,14 +14,17 @@
 							<section>
 								<sname>Introduction</sname>
 								<spath>ch01s1.html</spath>
+								<snumfigures> 3 </snumfigures>
 							</section>
 							<section>
 								<sname>What is Computer Science?</sname>
 								<spath>ch01s2.html</spath>
+								<snumfigures> 2 </snumfigures>
 							</section>
 							<section>
 								<sname>Four Important Questions</sname>
 								<spath>ch01s3.html</spath>
+								<snumfigures> 2 </snumfigures>
 									<!--This is where the sub-sub-sections of Chapter 1 Section 3-->
 									<sub-section>
 										<sbname>How are computers used?</sbname>
@@ -40,7 +43,7 @@
 										<sbpath>ch01s3p4.html</sbpath>
 									</sub-section>
 				    </section>
-				 
+				 </sections>   
 		</chapter> <!-- End of First Chapter -->
 	      
 	    <!--This is the opening tag for Chapter Two-->
@@ -194,7 +197,7 @@
       <cname>Computing and Intelligence</cname>
       <cpath>ch14.html</cpath>
     </chapter>
-    <chapter>
+    <chapter>	
       <cname>The Past, Present, and Future of Computing</cname>
       <cpath>ch15.html</cpath>
     </chapter>
