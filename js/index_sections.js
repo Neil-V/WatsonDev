@@ -16,27 +16,30 @@ $(document).ready(function(){
         $('chapter',xml).each(function(i) {
             var chapterName = $(this).find("cname").text();
             var chapterPath = $(this).find("cpath").text();
-
             
             // Build row HTML data and store in string
             mydata = BuildChaptersHTML(chapterName, chapterPath, i);
             myHTMLOutput = myHTMLOutput + mydata;
 
             // Run the function for each section tag in (chapter i?) the XML file
-            $('sections',xml).each(function(j){
+            
 
-                $('section',xml).each(function(j) {
-                var sectionName = $(this).find("sname").text();
-                var sectionPath = $(this).find("spath").text();
-                var sectionNumFigures = $(this).find("snumfigures").text();
+                $('section',xml).each(function(j){
+                    
+                    //if(numberofsectionslimit has been reached) { break;}
+                    //else{ vvv }
+                    
 
-                // Build row HTML data and store in string
-                mydata = BuildSectionsHTML(sectionName, sectionPath, sectionNumFigures, i, j);
-                myHTMLOutput = myHTMLOutput + mydata;
+                    var sectionName = $(this).find("sname").text();
+                    var sectionPath = $(this).find("spath").text();
+                    var sectionNumFigures = Number($(this).find("snumfigures").text());
 
-
+                    // Build row HTML data and store in string
+                    mydata = BuildSectionsHTML(sectionName, sectionPath, sectionNumFigures, i, j);
+                    myHTMLOutput = myHTMLOutput + mydata;
+                
                 }); // End of <sections> roll through function
-            }); // End of <sections> roll through function
+            //}); // End of <sections> roll through function
         }); // End of <chapter> roll through
         
         // Update the DIV called Content Area with the HTML string
@@ -85,4 +88,5 @@ function getPrev(p){
     return pathArray[p--];
 
 }*/
+
 
