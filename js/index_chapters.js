@@ -2,7 +2,7 @@
 // Start function when DOM has completely loaded 
 $(document).ready(function()
 { 
-
+	console.log("Here.");
     // Open the everypage.xml file
     $.get("everypage.xml",{},function(xml)
     {

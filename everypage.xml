@@ -135,7 +135,7 @@
 						<spath>ch03s3.html</spath>
 							<!--This is where the sub-sub-sections of Chapter 3 Section 3-->
 							<sub-section>
-								<sbsname>Contiguous Storage</sbsname>
+								<sbname>Contiguous Storage</sbname>
 								<sbpath>ch03s3p1.html</sbpath>
 							</sub-section>
 							<sub-section>

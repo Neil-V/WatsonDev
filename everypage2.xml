@@ -1,0 +1,55 @@
+<?xml version='1.0'?>
+<!--This is the opening tag for the Table of Contents-->
+<table-of-contents>
+	<chapter name="The Science of Computing" path="ch01.html" id="science">
+		<section name="Indroduction" path="ch01s1.html" id="scienceIntro"></section>
+		<section name="What is Computer Science?" path="ch01s2" id="scienceWhat"></section>
+		<section name="Four Important Questions" path="ch01s3" id="scienceFour">
+			<sub-section name="How are computers used?" path="ch01s3s1" id="scienceFour1"></sub-section>
+			<sub-section name="How does computer software work?" path="ch01s3s2" id="scienceFour2"></sub-section>
+			<sub-section name="How does computer hardware work?" path="ch01s3s3" id="scienceFour3"></sub-section>
+			<sub-section name="What are the limitations and potential?" path="ch01s3s4" id="scienceFour4"></sub-section>
+		</section>
+		
+		<figures>
+			<figure id="paradigms"></figure>
+			<figure id="blockdiagram"></figure>
+			<figure id="finiteautomaton"></figure>
+		</figures>
+	</chapter>
+	
+	<chapter name="Computers as Communication and Problem Solving Tools" path="ch02.html" id="tools">
+		<section name="Introduction" path="ch2s1" id="toolsIntro"></section>
+		<section name="The changing role of computers?" path="ch2s2" id="toolsRoles"></section>
+		<section name="Communication-Oriented Applications" path="ch2s3" id="toolsCommunication">
+			<sub-section name="Email" path="ch2s3s1" id="toolsCommunication1"></sub-section>
+			<sub-section name="Instant Messaging Applications" path="ch2s3s2" id="toolsCommunication2"></sub-section>
+			<sub-section name="Web Browsers" path="ch2s3s3" id="toolsCommunication3"></sub-section>
+			<sub-section name="Word Processors" path="ch2s3s4" id="toolsCommunication4"></sub-section>
+			<sub-section name="Presentation Software" path="ch2s3s5" id="toolsCommunication5"></sub-section>
+		</section>
+		<section name="Spreadsheets" path="ch2s4" id="toolsSpreadsheets">
+			<sub-section name="Basic Features of a Spreadsheet" path="ch2s4s1" id="toolsSpreadsheets1"></sub-section>
+			<sub-section name="Formula Evaluation: A Closer Look" path="ch2s4s2" id="toolsSpreadsheets2"></sub-section>
+			<sub-section name="Relative and Absolute All References" path="ch2s4s3" id="toolsSpreadsheets3"></sub-section>
+			<sub-section name='Miscellaneous Features: "Replicate" and Built-In Functions' path="ch2s4s4" id="toolsSpreadsheets4"></sub-section>
+			<sub-section name="Solving Problems with Spreadsheets" path="ch2s4s5" id="toolsSpreadsheets5"></sub-section>
+		</section>
+		
+		<figures>
+			<figure id="moreFigs1"></figure>
+			<figure id="moreFigs2"></figure>
+			<figure id="moreFigs3"></figure>
+		</figures>
+	</chapter>
+	
+	<chapter name="Information Storage and Retrieval" path="ch03.html" id="information">
+		<section name="Introduction" path="ch03s1.html" id="informationIntro"></section>
+		
+		<figures>
+			<figure id="fig1ID"></figure>
+		</figures>
+	</chapter>
+
+</table-of-contents>
+<!-- vim: set sts=2 sw=2 : -->

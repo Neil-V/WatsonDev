@@ -12,6 +12,7 @@
 		<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="js/bootstrap-slider.js"></script>
+		<script type="text/javascript" src="js/Numbering.js"></script>
 				
 
 	</head>
@@ -324,7 +325,7 @@
 			<p class="Figure">(b) A code fragment written in the functional style</p>
 	
 			<p class="Figure">
-				Figure 1.1:  Examples of the functional and imperative paradigms
+				Figure <span class="figNum paradigms"></span>:  Examples of the functional and imperative paradigms
 			</p>
 
 			<p>
@@ -406,7 +407,7 @@
 			<img src="Images/fig1-2.png" alt="A block diagram of a computer" class="Image">
 	
 			<p class="Figure">
-				Figure 1.2:  A block diagram of a computer
+				Figure <span class="figNum blockdiagram"></span>:  A block diagram of a computer
 			</p>
 
 			<p>
@@ -532,7 +533,7 @@
 			<img src="Images/fig1-3.png" alt="A finite automaton that accepts all strings of zeros and ones that begin with a one" class="Image">
 		
 			<p class="Figure">
-				Figure 1.3:  A finite automaton that accepts all strings of zeros and ones that begin with a one
+				Figure <span class="figNum finiteautomaton"></span>:  A finite automaton that accepts all strings of zeros and ones that begin with a one
 			</p>
 		
 			<p>
@@ -674,5 +675,26 @@
 		</div> <!-- End page wrapper -->
 
 	</body>
+	
+	<script>
+	
+		$(document).ready(function() {
+			getFigureNumbers("science", setFigureNumbers);
+			console.log("Getting figure numbers.");
+		});
+		
+		function setFigureNumbers(dict) {
+			var spans = document.getElementsByClassName("figNum");
+			console.log("Setting figure numbers.");
+			console.log(spans);
+			for (var i = 0; i < spans.length; i++) {
+				console.log("Here.");
+				var id = spans[i].className.replace("figNum ", "");
+				console.log(id);
+				spans[i].textContent = dict[id];
+			}
+		}
+
+	</script>
 </html>
 		
