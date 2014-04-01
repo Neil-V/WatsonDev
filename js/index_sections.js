@@ -24,8 +24,6 @@ $(document).ready(function() {
 			$("#ContentAreaSections").append( html.join("") );	// fill the content area with the html
 		}
 	});
-	
-	getArrowPathsPages("information", testFunc);
 });
 
 /*
@@ -65,13 +63,6 @@ function getItem(obj, depth, ind, path) {
 		html.push('</li>');									// close this list item
 	}
 }
-
-function testFunc(obj) {
-	console.log(obj.back);
-	console.log(obj.forward);
-}
-
-
 
 /* 	UNUSED CODE
  * 		This code is the iterative version of the table of contents; it is limited to only

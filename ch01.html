@@ -13,6 +13,7 @@
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="js/bootstrap-slider.js"></script>
 		<script type="text/javascript" src="js/Numbering.js"></script>
+		<script type="text/javascript" src="js/Miscellaneous.js"></script>
 				
 
 	</head>
@@ -680,19 +681,20 @@
 	
 		$(document).ready(function() {
 			getFigureNumbers("science", setFigureNumbers);
-			console.log("Getting figure numbers.");
+			getArrowPathsChapters("science", setArrows);
 		});
 		
 		function setFigureNumbers(dict) {
 			var spans = document.getElementsByClassName("figNum");
-			console.log("Setting figure numbers.");
-			console.log(spans);
 			for (var i = 0; i < spans.length; i++) {
-				console.log("Here.");
 				var id = spans[i].className.replace("figNum ", "");
-				console.log(id);
 				spans[i].textContent = dict[id];
 			}
+		}
+		
+		function setArrows(obj) {
+			console.log("Back: " + obj.back);
+			console.log("Forward: " + obj.forward);
 		}
 
 	</script>
