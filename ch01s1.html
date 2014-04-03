@@ -31,7 +31,7 @@
 			div.floating-previous a, div.floating-menu h3 {display:block;margin:0 0.5em;}
 			</style>
 			<div class="floating-previous">
-				<a href="index.html">
+				<a href="#" onclick="prevArrowPage(pageObj)">
 				<img style="border:0;" src="Images/left-arrow-blue.png" alt="Previous page" width="40">
 				</a>
 			</div>
@@ -42,7 +42,7 @@
 			div.floating-next a, div.floating-menu h3 {display:block;margin:0 0.5em;}
 			</style>
 			<div class="floating-next">
-				<a href="ch02.html">
+				<a href="#" onclick="nextArrowPage(pageObj)">
 				<img style="border:0;" src="Images/right-arrow-blue.png" alt="Next page" width="40">
 				</a>
 			</div>
@@ -679,32 +679,15 @@
 	</body>
 	
 	<script>
-		
+		var pageObj;
 		// once the document has loaded, set figure numbers and arrow paths
 		$(document).ready(function() {
-			populateFigureNumbers();
-			getArrowPaths();
+			var spans = document.getElementsByClassName("figNum");		// get the span elements on this page with the class 'figNum'
+			populateFigureDictionary("science", spans);
+			
+			pageObj = getArrowPathsByPage("scienceIntro");
 		});
 		
-		/* Calls the function within Numbering.js to get the figures and their numbers for this chapter */
-		function populateFigureNumbers() {
-			var figs = getFigureNumbers("science");						// call getFigureNumbers() with this chapter's ID
-			var spans = document.getElementsByClassName("figNum");		// get the span elements on this page with the class 'figNum'
-			for (var i = 0; i < spans.length; i++) {					// for all the spans elements
-				var id = spans[i].className.replace("figNum ", "");		// get the unique figure ID which is the second class name
-				spans[i].textContent = figs[id];						// set the spans text to its associated figure number by using the dictionary lookup
-			}
-		}
-		
-		/* Calls the function within Miscellaneous.js to get the arrow paths for this page's nav arrows */
-		function getArrowPaths(obj) {
-			var obj = getArrowPathsChapters("science");	// since ch01.html is usually a chapter's individual table of contents, I call getArrowPathsChapters() instead of getArrowPathsPages()
-			var prevArrow = document.getElementsByClassName("floating-previous")[0];	// get previous arrow object
-			var nextArrow = document.getElementsByClassName("floating-next")[0];		// get next arrow object
-			prevArrow.href = obj.previous;												// set prevArrow to previous path
-			nextArrow.href = obj.next;													// set nextArrow to next path
-		}
-
 	</script>
 </html>
 		

@@ -1,6 +1,15 @@
 var figs = [];
 
-function getFigureNumbers(chapID) {
+/* Calls the function within Numbering.js to get the figures and their numbers for this chapter */
+function populateFigureDictionary(chapID, spans) {
+	var figs = getFigureDictionary(chapID);						// call getFigureNumbers() with this chapter's ID
+	for (var i = 0; i < spans.length; i++) {					// for all the spans elements
+		var id = spans[i].className.replace("figNum ", "");		// get the unique figure ID which is the second class name
+		spans[i].textContent = figs[id];						// set the spans text to its associated figure number by using the dictionary lookup
+	}
+}
+
+function getFigureDictionary(chapID) {
 	var chapters = json["chapters"];
 	var chapInd;
 

@@ -1,3 +1,24 @@
+function prevArrowPage(obj) {
+	if (obj.previous == null) window.location.href = "ch_toc.html";
+	else window.location.href = obj.previous;
+}
+
+function nextArrowPage(obj) {
+	if (obj.next == null) window.location.href = "ch_toc.html";
+	else window.location.href = obj.next;
+}
+
+function getArrowPathsByPage(currPage) {
+	var obj = getArrowPathsPages(currPage);	// since ch01.html is usually a chapter's individual table of contents, I call getArrowPathsChapters() instead of getArrowPathsPages()
+
+	return obj;
+}
+
+function getArrowPathsByChapter(currChapterID) {
+	var obj = getArrowPathsChapters(currChapterID);
+	return obj;
+}
+
 function getArrowPathsChapters(currChapterID) {
 	var chapters = json["chapters"];
 	var chapInd;
@@ -33,6 +54,11 @@ var flag = false;
 var done = false;
 
 function getArrowPathsPages(_currPageID) {
+	lastPath = null;
+	nextPath = null;
+	flag = false;
+	done = false;
+	
 	currPageID = _currPageID;
 	findPage(json);
 	

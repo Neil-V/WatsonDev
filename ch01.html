@@ -68,6 +68,9 @@
 
 			
 			 <script>
+				var pageObj;
+				var chapObj;
+				
 				$(document).ready(function() {
 					loadLocalTableOfContents("science");
 					$('.years > archive_month').click(function() {
@@ -81,7 +84,13 @@
 					$('#expand').click(function() {
 						$('.archive_year > li').parent().find('ul').slideDown();
 					});
+					
+					// once the document has loaded, set figure numbers and arrow paths
+					
+					pageObj = getArrowPathsByPage("scienceIntro");
+					chapObj = getArrowPathsByChapter("science");
 				});
+				
 			</script>
 
 			
