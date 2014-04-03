@@ -1,0 +1,172 @@
+<chapters>
+	<chapter>
+		<id>science</id>
+		<name>The Science of Computing</name>
+		<path>ch01.html</path>
+		<sections>
+			<section>
+				<id>scienceIntro</id>
+				<name>Introduction</name>
+				<path>ch01s1.html</path>
+			</section>
+			<section>
+				<id>scienceWhat</id>
+				<name>What is Computer Science?</name>
+				<path>ch01s2.html</path>
+			</section>
+			<section>
+				<id>scienceFour</id>
+				<name>Four Important Questions</name>
+				<path>ch01s3.html</path>
+				<sections>
+					<section>
+						<id>scienceFour1</id>
+						<name>How are computers used?</name>
+						<path>ch01s3p1.html</path>
+					</section>
+					<section>
+						<id>scienceFour2</id>
+						<name>How does computer software work?</name>
+						<path>ch01s3p2.html</path>
+					</section>
+					<section>
+						<id>scienceFour3</id>
+						<name>How does computer hardware work?</name>
+						<path>ch01s3p3.html</path>
+					</section>
+					<section>
+						<id>scienceFour4</id>
+						<name>What are the limitations and potential?</name>
+						<path>ch01s3p4.html</path>
+					</section>
+				</sections>
+			</section>
+		</sections>
+		
+		<figures>
+			<figure>
+				<id>paradigms</id>
+			</figure>
+			<figure>
+				<id>blockdiagram</id>
+			</figure>
+			<figure>
+				<id>finiteautomaton</id>
+			</figure>
+		</figures>
+	</chapter>
+		
+	<chapter>
+		<id>tools</id>
+		<name>Computers as Communication and Problem Solving Tools</name>
+		<path>ch02.html</path>
+		<sections>
+			<section>
+				<id>toolsIntro</id>
+				<name>Introduction</name>
+				<path>ch02s1.html</path>
+			</section>
+			<section>
+				<id>toolsRoles</id>
+				<name>The changing role of computers?</name>
+				<path>ch02s2.html</path>
+			</section>
+			<section>
+				<id>toolsCommunication</id>
+				<name>Communication-Oriented Applications</name>
+				<path>ch02s3.html</path>
+				<sections>
+					<section>
+						<id>toolsCommunication1</id>
+						<name>Email</name>
+						<path>ch02s3p1.html</path>
+					</section>
+					<section>
+						<id>toolsCommunication2</id>
+						<name>Instant Messaging Applications</name>
+						<path>ch02s3p2.html</path>
+					</section>
+					<section>
+						<id>toolsCommunication3</id>
+						<name>Web Browsers</name>
+						<path>ch02s3p3.html</path>
+					</section>
+					<section>
+						<id>toolsCommunication4</id>
+						<name>Word Processors</name>
+						<path>ch02s3p4.html</path>
+					</section>
+					<section>
+						<id>toolsCommunication5</id>
+						<name>Presentation Software</name>
+						<path>ch02s3p5.html</path>
+					</section>
+				</sections>
+			</section>
+			<section>
+				<id>toolsSpreadsheets</id>
+				<name>Spreadsheets</name>
+				<path>ch02s4.html</path>
+				<sections>
+					<section>
+						<id>toolsSpreadsheets1</id>
+						<name>Basic Features of Spreadsheets</name>
+						<path>ch02s4p1.html</path>
+					</section>
+					<section>
+						<id>toolsSpreadsheets2</id>
+						<name>Formula Evaluation: A Closer Look</name>
+						<path>ch02s4p2.html</path>
+					</section>
+					<section>
+						<id>toolsSpreadsheets3</id>
+						<name>Relative and Absolute All References</name>
+						<path>ch02s4p3.html</path>
+					</section>
+					<section>
+						<id>toolsSpreadsheets4</id>
+						<name>Miscellaneous Features: "Replicate" and Built-In Functions</name>
+						<path>ch02s4p4.html</path>
+					</section>
+					<section>
+						<id>toolsSpreadsheets5</id>
+						<name>Solving Problems with Spreadsheets</name>
+						<path>ch02s4p5.html</path>
+					</section>
+				</sections>
+			</section>
+		</sections>
+		
+		<figures>
+			<figure>
+				<id>figID1</id>
+			</figure>
+			<figure>
+				<id>figID2</id>
+			</figure>
+			<figure>
+				<id>figID3</id>
+			</figure>
+		</figures>
+	</chapter>
+		
+	<chapter>
+		<id>information</id>
+		<name>Information Storage and Retrieval</name>
+		<path>ch03.html</path>
+		
+		<figures>
+			<figure>
+				<id>moreFigID1</id>
+			</figure>
+			<figure>
+				<id>moreFigID2</id>
+			</figure>
+			<figure>
+				<id>moreFigID3</id>
+			</figure>
+		</figures>
+	</chapter>
+	
+</chapters>
+					

@@ -1,3 +1,26 @@
+var figs = [];
+
+function getFigureNumbers(chapID) {
+	var chapters = json["chapters"];
+	var chapInd;
+
+	for (var i = 0; i < chapters.chapter.length; i++) {
+		var currChapID = chapters.chapter[i].id;
+		if (currChapID == chapID) chapInd = i;
+	}
+	
+	var chapter = chapters.chapter[chapInd];
+	for (var i = 0; i < chapter.figures.figure.length; i++) {
+		var figID = chapter.figures.figure[i].id;
+		figs[figID] = (chapInd + 1) + "." + (i + 1);
+	}
+	
+	return figs;
+}
+
+
+//;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; UNUSED XML FUNCTIONS ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 /*
  * getFigureNumbers()
  *
@@ -12,7 +35,7 @@
  *
  * @return				A dictionary (key,value pair) where the key (index) is the unique figure ID and the value is the figure number (e.g. 11.4)
  */
-function getFigureNumbers(chapID, callback) {
+function getFigureNumbersXML(chapID, callback) {
 	var dict = new Array();								// new array to store results
 	
 	$.ajax({

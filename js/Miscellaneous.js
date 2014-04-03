@@ -1,8 +1,77 @@
+function getArrowPathsChapters(currChapterID) {
+	var chapters = json["chapters"];
+	var chapInd;
+
+	for (var i = 0; i < chapters.chapter.length; i++) {
+		var currChapID = chapters.chapter[i].id;
+		if (currChapID == currChapterID) chapInd = i;
+	}
+	
+	var prevChapPath;
+	var nextChapPath;
+	
+	if (chapInd == 0) {
+		prevChapPath = null;
+		nextChapPath = chapters.chapter[chapInd+1].path;
+	}
+	else if (chapInd == chapters.chapter.length - 1) {
+		prevChapPath = chapters.chapter[chapInd-1].path;
+		nextChapPath = null;
+	}
+	else {
+		prevChapPath = chapters.chapter[chapInd-1].path;
+		nextChapPath = chapters.chapter[chapInd+1].path;
+	}
+	
+	return { previous: prevChapPath, next: nextChapPath };
+}
+
+var lastPath = null;
+var nextPath = null;
+var currPageID;
+var flag = false;
+var done = false;
+
+function getArrowPathsPages(_currPageID) {
+	currPageID = _currPageID;
+	findPage(json);
+	
+	return { previous: lastPath, next: nextPath };
+}
+
+function findPage(o) {
+	var name;
+	var path;
+	if (o.figure || done == true) return;
+
+    for (var i in o) {
+		if (o[i] !== null && typeof(o[i]) == "string") {
+			if (i == "id") {
+				if (flag == true) { nextPath = o["path"]; done = true; return; }
+				
+				if (o["id"] == currPageID) {
+					flag = true;
+				}
+				else lastPath = o["path"];
+			}
+		}
+
+        if (o[i] !== null && typeof(o[i])=="object") {
+            findPage(o[i]);
+        }
+    }
+}
+
+//;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; UNUSED XML CODE END ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+/*
 var last;			// Used in obtaining previous and next page (getArrowPathsPages()) : always holds the last node visited
 var forward;		// Used in obtaining previous and next page (getArrowPathsPages()) : always holds the next node to be visited
 var flag = false;	// Used in obtaining previous and next page (getArrowPathsPages()) : a flag indicating if we found the requested section
 var done = false;	// Used in obtaining previous and next page (getArrowPathsPages()) : a flag indicating if we are completely done
 var currPageID;		// Used in obtaining previous and next page (getArrowPathsPages()) : the current page the user is currently on
+*/
+
 /*
  * getArrowPathsChapters()
  *
@@ -18,7 +87,7 @@ var currPageID;		// Used in obtaining previous and next page (getArrowPathsPages
  *									Back: 		(String) Path of chapter previous the current chapter
  *									Forward: 	(String) Path of chapter after the current chapter
  */
-function getArrowPathsChapters(currChapterID, callback) {
+function getArrowPathsChaptersXML(currChapterID, callback) {
 	var back;											// back file path
 	var forward;										// forward file path
 	
@@ -64,7 +133,7 @@ function getArrowPathsChapters(currChapterID, callback) {
  *									Back: 		(String) Path of page previous the current chapter
  *									Forward: 	(String) Path of page after the current chapter
  */
-function getArrowPathsPages(_currPageID, callback) {
+function getArrowPathsPagesXML(_currPageID, callback) {
 	last = null;
 	forward = null;
 	currPageID = _currPageID;
